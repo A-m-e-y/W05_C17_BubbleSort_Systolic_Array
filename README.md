@@ -8,6 +8,11 @@ Course: HW for AI &amp; ML, Week 5 Challenge 17, Benchmarking Bubble sort on a s
 ## **TL;DR**
 
 - This project compares the performance of a traditional **pure Python implementation** of Bubble Sort with a **NumPy-based systolic array simulation**. 
+- The speedup is primarily due to **NumPy's optimized C backend**, which allows for efficient memory access and computation and not because of the systolic array simulation itself.
+- The systolic array simulation is a **conceptual exercise** to understand how data flows in hardware architectures, but the actual performance gain comes from using NumPy's efficient array operations.
+- Each excecution block runs parallely in actual Hardware implementation of Systolic Array.
+- In this simulation, each execution block runs sequentially, but the systolic array concept is still applied to understand how data flows through the array.
+
 - The results clearly demonstrate that the NumPy systolic version significantly outperforms the pure Python implementation for larger input sizes — up to **7×–8× faster** for size 10000.
 
 - The average execution times (in seconds) for different input sizes are:
@@ -20,6 +25,7 @@ Course: HW for AI &amp; ML, Week 5 Challenge 17, Benchmarking Bubble sort on a s
     | 10000      | 10.77         | 1.43             |
 
 - For very small arrays (e.g., size 10), the pure Python version is faster simply due to **low overhead**. But as the array size increases, the **vectorized operations** in the NumPy version dominate and drastically reduce execution time.
+
 
 ---
 
