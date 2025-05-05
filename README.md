@@ -135,12 +135,6 @@ def systolic_bubble_sort_numpy(arr):
 
 Bubble Sort converges by “bubbling” the largest value to the end in each full pass. Alternating even/odd phase comparisons simulates this behavior in parallel lanes — like a systolic pipeline.
 
-Absolutely — the **even/odd phase logic** is **central** to how both **Bubble Sort** and **systolic arrays** implement **neighbor-based processing** in a synchronized, non-conflicting way.
-
-Let’s break it down **visually and conceptually**.
-
----
-
 ## Why Even-Odd Phases?
 
 ### Problem:
