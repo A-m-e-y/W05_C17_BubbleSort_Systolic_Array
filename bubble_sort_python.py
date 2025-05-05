@@ -17,7 +17,7 @@ def benchmark_bubble_sort():
         run_times = []
         print(f"\nRunning bubble sort for size = {size}")
 
-        for run in range(100):
+        for run in range(25):
             data = [random.randint(0, 10000) for _ in range(size)]
             start_time = time.time()
             bubble_sort(data)
@@ -27,7 +27,7 @@ def benchmark_bubble_sort():
 
         # Exclude first 2 runs
         avg_time = sum(run_times[2:]) / (len(run_times) - 2)
-        print(f"Average execution time (98 runs): {avg_time:.6f} sec")
+        print(f"Average execution time ({len(run_times) - 2} runs): {avg_time:.6f} sec")
         results.append(("python_pure", avg_time))
 
     # Write to CSV
